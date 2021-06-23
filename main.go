@@ -37,7 +37,6 @@ func indexAction(w http.ResponseWriter, r *http.Request) {
 func helloAction(w http.ResponseWriter, r *http.Request) {
 	j := map[string]stick.Value{"name": "Hello : " + strconv.Itoa(rand.Intn(10000))}
 	render("hello.html.twig", j, w, r)
-
 }
 
 func render(template string, j map[string]stick.Value, w http.ResponseWriter, r *http.Request) {
